@@ -1,3 +1,5 @@
+
+use std::prelude::v1::*;
 use super::alphabet::Alphabet;
 use super::dfa::{Utf8DFABuilder, DFA};
 use super::levenshtein_nfa::Distance;
@@ -53,7 +55,7 @@ impl ParametricStateIndex {
         let num_offsets = query_len + 1;
         let max_num_states = num_param_states * num_offsets;
         ParametricStateIndex {
-            state_index: vec![None; max_num_states],
+            state_index: std::vec![None; max_num_states],
             state_queue: Vec::with_capacity(100),
             num_offsets: num_offsets,
         }
@@ -219,7 +221,7 @@ impl ParametricDFA {
 
         let max_distance = nfa.max_distance();
         let multistate_diameter = nfa.multistate_diameter();
-        let mut transitions: Vec<Transition> = vec![];
+        let mut transitions: Vec<Transition> = std::vec![];
 
         let num_chi = 1 << multistate_diameter;
         let chi_values: Vec<u64> = (0..num_chi).collect();

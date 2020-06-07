@@ -1,3 +1,5 @@
+
+use std::prelude::v1::*;
 use super::Distance;
 
 /// Sink state. See [DFA](./index.html)
@@ -190,7 +192,7 @@ impl Utf8DFABuilder {
     /// lower than `max_num_states`.
     pub fn with_max_num_states(max_num_states: usize) -> Utf8DFABuilder {
         Utf8DFABuilder {
-            index: vec![None; max_num_states * 4 + 3],
+            index: std::vec![None; max_num_states * 4 + 3],
             distances: Vec::with_capacity(100),
             transitions: Vec::with_capacity(100),
             initial_state: 0u32,

@@ -1,3 +1,5 @@
+
+use std::prelude::v1::*;
 use crate::{Distance, LevenshteinNFA, ParametricDFA};
 use std::collections::HashSet;
 

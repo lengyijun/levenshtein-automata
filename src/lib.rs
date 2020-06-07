@@ -34,6 +34,9 @@ I also tried to explain it in the following [blog post](https://fulmicoton.com/p
 
 #![cfg_attr(test, feature(test))]
 
+#![no_std]
+extern crate sgx_tstd as std;
+
 #[cfg(test)]
 extern crate test;
 
